@@ -1,5 +1,9 @@
 <H1>About LaTienda</h1>
 
+<a href="https://github.com/kornis/grupo_6_marketplace/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/kornis/grupo_6_marketplace"></a>
+<a href="https://github.com/kornis/grupo_6_marketplace/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/kornis/grupo_6_marketplace"></a>
+<a href="https://github.com/kornis/grupo_6_marketplace/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/kornis/grupo_6_marketplace"></a>
+
 <p>LaTienda es un ecommerce dedicado a la venta minorista de todo tipo de indumentaria. Cuenta ademas con sucursales y showroom para visitar personalmente</p>
 <p>Este proyecto de marketplace tiene un diseño exclusivo para vestimenta</p>
 <br>
