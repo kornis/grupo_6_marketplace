@@ -15,7 +15,7 @@
 
 <h3>La portada</h3>
 
-<img src="" width="600px">
+<img src="https://github.com/kornis/grupo_6_marketplace/blob/master/mockups/home-readme.PNG" width="600px">
 
 <br>
 <br>
