@@ -1,0 +1,160 @@
+@import url("normalize.css");
+*
+{
+  box-sizing: border-box;
+}
+ul li,
+ul
+{
+  list-style: none;
+  text-align: center;
+  padding:0;
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+
+a {
+
+  text-decoration: none;
+}
+
+.nav-icons
+{
+  padding: 10px;
+}
+
+.container
+{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+.row,
+.col
+{
+  display: flex;
+}
+.row
+{
+  flex-direction: row;
+ flex-wrap: wrap;
+}
+.nav>li
+{
+ padding: 5px 30px 5px;
+}
+.nav li
+{
+  display: inline-block;
+}
+
+.busqueda
+{
+  padding:15px;
+}
+.banner img
+{
+  width: 100%;
+}
+.card
+{
+  margin:15px;
+  border: 1px solid olive;
+}
+.card img
+{
+  width: 100%;
+}
+
+.footer-part
+{
+  padding: 25px;
+  text-align: center;
+  
+}
+.footer-part p,
+.footer-part ul li
+{
+  font-size: 20px;
+}
+
+/*---------- col propieties----------*/
+
+.col-1
+{
+  width: 8.3333%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-2
+{
+  width: 16.666%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-3
+{
+  width: 25%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-4
+{
+  width: 33.333%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-5
+{
+  width: 41.665%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-6
+{
+  width: 50%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-7
+{
+  width: 58.33%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-8
+{
+  width: 66.66%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-9
+{
+  width: 75%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-10
+{
+  width: 83.33%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-11
+{
+  width: 91.66%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+.col-12
+{
+  width: 100%;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+}
+
+
