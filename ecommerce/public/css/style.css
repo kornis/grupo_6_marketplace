@@ -92,6 +92,8 @@ align-self: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav li
@@ -115,7 +117,7 @@ align-self: center;
 }
 .card
 {
-  margin:15px;
+  margin:5px;
 }
 .card img
 {
@@ -125,21 +127,25 @@ footer
 {
   background-color: rgb(106, 160, 231);
 }
+.main-foot
+{
+  padding: 15px;
+}
 
 .footer-part
 {
-  padding: 25px 40px 25px;
   text-align: center;
-  align-items: center;
-  justify-content: space-between;
-  
+   justify-content: center;
 }
-.footer-part p,
-.footer-part ul li
+.footer-part li
 {
-  font-size: 15px;
-  align-self: center;
+  padding: 3px;
 }
+.footer-part h2
+{
+  margin: 0;
+}
+
 
 /*---------- col propieties----------*/
 
@@ -152,6 +158,7 @@ footer
 {
   width: 16.666%;
   flex-wrap: wrap;
+
 }
 .col-3
 {
