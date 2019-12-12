@@ -11,6 +11,9 @@ controller =
 {
     root: (req, res) => {
         res.send(readHTML('index'));
+    },
+    carrito: (req, res) => {
+        res.send(readHTML('carrito'));
     }
 }
 
