@@ -1,207 +1,22 @@
-@import url("normalize.css");
-*
-{
-  box-sizing: border-box;
-}
-ul li,
-ul
-{
-  list-style: none;
-  text-align: center;
-  padding:0;
-}
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  width: 100%;
-  background-color: #EBEBEB;
+.container {
+  border: solid 1px red;
 }
 
-a {
-
-  text-decoration: none;
+[class*=col] {
+  border: solid 1px yellow;
 }
-.nav
-{
+
+.crear-cuenta h2 {
+  margin: auto;
+  margin-top: 5px;
+}
+
+.datos-personales {
+  padding: 25px;
+}
+
+.datos-personales form {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  
-}
-.subtitle
-{
   justify-content: center;
+  flex-direction: column;
 }
-.nav1
-{
-  height: auto;
-}
-
-.logo img
-{
-  width: 100px;
-}
-.social-logo,
-.logo,
-.title,
-.title-dir
-{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-}
-.social-logo i,
-.title-dir p,
-.title img
-{
-  display: flex;
-align-self: center;
-}
-.title-dir p
-{
-  margin: 0 15px;
-}
-
-
-.nav-icons
-{
-  justify-content: space-between;
-  padding: 0 5% 0 5%;
-  align-content: center;
-}
-
-.container
-{
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.col,
-.col-1,
-.col-2,.col-3,.col-4,.col-5,
-.col-6,.col-7,.col-8,.col-9,
-.col-10,.col-11,.col-12
-{
-  display: flex;
-}
-.row
-{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.nav li
-{
-  display: inline-block;
-}
-
-
-.busqueda input
-{
-  display: inline-block;
-  border-radius: 8px;
-  border-style: groove;
-  width: 100%;
-  margin: 8px 8px 8px 10%;
-  
-}
-.banner img
-{
-  width: 100%;
-}
-.card
-{
-  margin:15px;
-}
-.card img
-{
-  width: 100%;
-}
-footer
-{
-  background-color: rgb(106, 160, 231);
-}
-
-.footer-part
-{
-  padding: 25px 40px 25px;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-.footer-part p,
-.footer-part ul li
-{
-  font-size: 15px;
-  align-self: center;
-}
-
-/*---------- col propieties----------*/
-
-.col-1
-{
-  width: 8.3333%;
-  flex-wrap: wrap;
-}
-.col-2
-{
-  width: 16.666%;
-  flex-wrap: wrap;
-}
-.col-3
-{
-  width: 25%;
-  flex-wrap: wrap;
-}
-.col-4
-{
-  width: 33.333%;
-  flex-wrap: wrap;
-}
-.col-5
-{
-  width: 41.665%;
-  flex-wrap: wrap;
-}
-.col-6
-{
-  width: 50%;
-  flex-wrap: wrap;
-}
-.col-7
-{
-  width: 58.33%;
-  flex-wrap: wrap;
-}
-.col-8
-{
-  width: 66.66%;
-  flex-wrap: wrap;
-}
-.col-9
-{
-  width: 75%;
-  flex-wrap: wrap;
-}
-.col-10
-{
-  width: 83.33%;
-  flex-wrap: wrap;
-}
-.col-11
-{
-  width: 91.66%;
-  flex-wrap: wrap;
-}
-.col-12
-{
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-

@@ -11,6 +11,10 @@ controller =
 {
     root: (req, res) => {
         res.send(readHTML('index'));
+    },
+
+    registro: (req, res) => {
+        res.send(readHTML('formulario-registro'));
     }
 }
 
