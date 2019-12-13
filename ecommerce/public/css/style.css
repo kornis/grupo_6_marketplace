@@ -1,95 +1,25 @@
-@import url("normalize.css");
-*
-{
-  box-sizing: border-box;
-}
-ul li,
-ul
-{
-  list-style: none;
-  text-align: center;
-  padding:0;
-}
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  width: 100%;
-  background-color: #EBEBEB;
+/* --- css formulario-registro.html --- */
+
+.container {
+  border: solid 1px red;
 }
 
-a {
-
-  text-decoration: none;
+[class*=col] {
+  border: solid 1px yellow;
 }
-.nav
-{
+
+.crear-cuenta h2 {
+  margin: auto;
+  margin-top: 5px;
+}
+
+.datos-personales {
+  padding: 25px;
+}
+
+.datos-personales form {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  
-}
-.subtitle
-{
-  justify-content: center;
-}
-.nav1
-{
-  height: auto;
-}
-
-.logo img
-{
-  width: 100px;
-}
-.social-logo,
-.logo,
-.title,
-.title-dir
-{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-}
-.social-logo i,
-.title-dir p,
-.title img
-{
-  display: flex;
-align-self: center;
-}
-.title-dir p
-{
-  margin: 0 15px;
-}
-
-
-.nav-icons
-{
-  justify-content: space-between;
-  padding: 0 5% 0 5%;
-  align-content: center;
-}
-
-.container
-{
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.col,
-.col-1,
-.col-2,.col-3,.col-4,.col-5,
-.col-6,.col-7,.col-8,.col-9,
-.col-10,.col-11,.col-12
-{
-  display: flex;
-}
-.row
-{
-  display: flex;
+<<<<<<< HEAD
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: auto;
@@ -99,9 +29,15 @@ align-self: center;
 .nav li
 {
   display: inline-block;
+=======
+  justify-content: center;
+  flex-direction: column;
+>>>>>>> 4b30c65c236b156b82c418b4c4a10d6d09a8140b
 }
 
+/*hoja de estilo de carrito*/
 
+<<<<<<< HEAD
 .busqueda input
 {
   display: inline-block;
@@ -204,11 +140,23 @@ footer
 {
   width: 91.66%;
   flex-wrap: wrap;
+=======
+* {
+  box-sizing: border-box;
 }
-.col-12
-{
-  width: 100%;
-  flex-wrap: wrap;
+#main-image{
+  border-radius: 50%;
+  margin: 1.8%;
 }
 
-
+body {
+  margin: 0;
+  font-family: sans-serif;
+>>>>>>> 4b30c65c236b156b82c418b4c4a10d6d09a8140b
+}
+.articulo{
+  border:1px solid black;
+}
+.resumen{
+  border:1px solid black;
+}
