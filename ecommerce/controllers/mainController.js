@@ -13,6 +13,10 @@ controller =
         res.send(readHTML('index'));
     },
 
+    carrito: (req, res) => {
+        res.send(readHTML('carrito'));
+    },
+    
     registro: (req, res) => {
         res.send(readHTML('formulario-registro'));
     }

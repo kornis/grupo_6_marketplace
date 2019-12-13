@@ -19,6 +19,144 @@
 
 .datos-personales form {
   display: flex;
+<<<<<<< HEAD
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav li
+{
+  display: inline-block;
+=======
   justify-content: center;
   flex-direction: column;
+>>>>>>> 4b30c65c236b156b82c418b4c4a10d6d09a8140b
+}
+
+/*hoja de estilo de carrito*/
+
+<<<<<<< HEAD
+.busqueda input
+{
+  display: inline-block;
+  border-radius: 8px;
+  border-style: groove;
+  width: 100%;
+  margin: 8px 8px 8px 10%;
+  
+}
+.banner img
+{
+  width: 100%;
+}
+.card
+{
+  margin:5px;
+}
+.card img
+{
+  width: 100%;
+}
+footer
+{
+  background-color: rgb(106, 160, 231);
+}
+.main-foot
+{
+  padding: 15px;
+}
+
+.footer-part
+{
+  text-align: center;
+   justify-content: center;
+}
+.footer-part li
+{
+  padding: 3px;
+}
+.footer-part h2
+{
+  margin: 0;
+}
+
+
+/*---------- col propieties----------*/
+
+.col-1
+{
+  width: 8.3333%;
+  flex-wrap: wrap;
+}
+.col-2
+{
+  width: 16.666%;
+  flex-wrap: wrap;
+
+}
+.col-3
+{
+  width: 25%;
+  flex-wrap: wrap;
+}
+.col-4
+{
+  width: 33.333%;
+  flex-wrap: wrap;
+}
+.col-5
+{
+  width: 41.665%;
+  flex-wrap: wrap;
+}
+.col-6
+{
+  width: 50%;
+  flex-wrap: wrap;
+}
+.col-7
+{
+  width: 58.33%;
+  flex-wrap: wrap;
+}
+.col-8
+{
+  width: 66.66%;
+  flex-wrap: wrap;
+}
+.col-9
+{
+  width: 75%;
+  flex-wrap: wrap;
+}
+.col-10
+{
+  width: 83.33%;
+  flex-wrap: wrap;
+}
+.col-11
+{
+  width: 91.66%;
+  flex-wrap: wrap;
+=======
+* {
+  box-sizing: border-box;
+}
+#main-image{
+  border-radius: 50%;
+  margin: 1.8%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+>>>>>>> 4b30c65c236b156b82c418b4c4a10d6d09a8140b
+}
+.articulo{
+  border:1px solid black;
+}
+.resumen{
+  border:1px solid black;
 }

@@ -3,7 +3,8 @@ var router = express.Router();
 const mainController = require("../controllers/mainController");
 
 /* GET home page. */
-router.get('/', mainController.root); 
+router.get('/', mainController.root);
+router.get("/carrito", mainController.carrito);
 router.get('/registro', mainController.registro); 
 
 module.exports = router;
