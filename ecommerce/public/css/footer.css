@@ -1,0 +1,28 @@
+
+footer
+{
+   margin-top: 20px;
+   background-color: orange;    
+   padding: 8px 15px 0 15px;
+}
+footer row
+{
+    justify-content: center;
+}
+.footer h3
+{
+    text-align: center;
+}
+footer li
+{
+    margin-top: 5px;
+}
+
+.footer2row
+{
+    background-color: slateblue;
+    padding:5px;
+    justify-content: center;
+}
+
+

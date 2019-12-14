@@ -1,0 +1,48 @@
+*
+{
+    box-sizing: border-box;
+}
+section
+{
+    margin-top: 15px;
+}
+.article
+{
+    padding:0 20px;
+}
+.article-image
+{
+    background-color: white;
+    width: 70%;
+
+    display: flex;
+    
+    flex-wrap: wrap;
+    
+    align-items: center;
+    
+    justify-content: center;
+    
+    padding: 8px 15px 2px 15px;
+    
+    margin: 6px;
+    
+    border: 1px solid gray;
+}
+.row.article img
+{
+    width:100%;
+}
+.article-name p {
+    text-align: center;
+}
+
+
+@media(min-width:992px)
+{
+    .article
+{
+    flex-wrap: nowrap;
+}
+}
+

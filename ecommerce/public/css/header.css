@@ -1,0 +1,168 @@
+a
+{
+    color: black;
+}
+li
+{
+    list-style: none;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.filtro
+{
+    display: none;
+}
+
+.filtro2
+{
+    display: none;
+}
+
+.nav2-col .fa-bars {
+
+    vertical-align: super;
+    font-size: 25px;
+    padding-left:10px;
+
+}
+.fa-bars
+{
+    display: inline !important;
+}
+
+
+.row.first-header {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-top: 5px;
+    font-size: 10px;
+    max-height: 38px;
+    background-color:cornflowerblue;
+}
+.row.first-header p
+{
+    text-align: center;
+}
+
+.logo-search img {
+
+    width: 100%;
+
+}
+
+.logo-search {
+
+    width: 24%;
+
+}
+.search {
+    width: 74%;
+margin-right: 5px;
+}
+.search input
+{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.row.main-header {
+
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+
+}
+.nav2 ul {
+    padding: 0;
+}
+.nav2
+{
+    justify-content: center;
+    margin-top: 15px;
+}
+.nav2-col
+{
+width: 100%;
+}
+.nav2 li
+{
+    text-align: center;
+    padding: 3px;
+    border: 2px solid olive;
+    background-color: goldenrod;
+}
+.nav2 a
+{
+    color: black;
+}
+
+.header
+{
+    background-color: rgb(236, 191, 44);
+}
+
+.social
+{
+    text-align: center;
+}
+
+
+
+
+@media(min-width:768px)
+{
+    .filtro2
+    {
+        display: flex;
+    }
+    .fa-bars
+    {
+        display: none !important;
+    }
+    .logo-search img
+    {
+       max-width: 84%;
+    }
+    .nav2-col
+    {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav2-col ul
+    {
+        display: inline-flex;
+        
+    }
+
+    .nav2-col li
+    {
+        border: none;
+        background: none;
+        padding: 2px 8px;
+    }
+    .nav2-col a
+    {
+        color: rgba(50, 50,50, 0.9);
+    }
+
+    .user-nav {
+
+        margin-left: 20px;
+    
+    }
+
+    .user-nav li
+    {
+        padding: 2px 8px;
+    }
+}
+
+@media(min-width:992px)
+{
+    .logo-search img {
+        max-width: 58%;
+    }
+}
