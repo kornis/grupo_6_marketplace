@@ -1,11 +1,11 @@
 /* --- css formulario-registro.html --- */
 
-.container {
-  border: solid 1px red;
+body {
+ background-color: #EBEBEB;
 }
 
 [class*=col] {
-  border: solid 1px yellow;
+
 }
 
 .crear-cuenta h2 {

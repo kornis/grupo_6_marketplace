@@ -7,11 +7,67 @@
     <title>Registrate | iClothes</title>
     <!-- Bootstrap Stylesheet -->
     <link rel="stylesheet" href="/css/bootstrap.css">
-    <!-- Own Stylesheet -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://kit.fontawesome.com/14cc9117fe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+    <header class="container-fluid header">
+        <div class="row first-header">
+            <div class="col-md-3">
+                <p>Lima 1111, Buenos Aires.<br> Telefono 4555-4545</p>
+            </div>
+            <div class="col-md-3 social">
+                <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-3x"></i></a>
+                <a href="#"><i class="far fa-envelope fa-3x"></i></a>
+            </div>
+        </div>
+    
+        <div class="row main-header">
+            <div class="col-md-2 col-lg-2 logo-search">
+                <img src="/images/logo-tienda.PNG" alt="">
+            </div>
+            <div class="col-md-9 col-lg-9 search">
+                <input type="search" placeholder="Busqueda Avanzada">
+            </div>
+        </div>
+    
+            <div class="row nav2">
+            <div class="nav2-col">
+                <ul class="filtro2">
+                    <li><a href="#">Zapatillas</a></li>
+                    <li><a href="#">Remeras</a></li>
+                    <li><a href="#">Pantalones</a></li>
+                    <li><a href="#">Vestidos</a></li>
+                    <li><a href="#">Hombre</a></li>
+                    <li><a href="#">Mujer</a></li>
+                    <li><a href="#">Niños</a></li>
+                    <li><a href="#">Por talle</a></li>
+                </ul>
+                <ul class="user-nav">
+                    <li><a href="#"><i class="fas fa-user"></i>  Usuario</a></li>
+                    <li class="cart"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+    
+                <i class="fas fa-bars" onclick="showFilter()">
+                <ul class="filtro" style="display: none;">
+                    <li><a href="#">Zapatillas</a></li>
+                    <li><a href="#">Remeras</a></li>
+                    <li><a href="#">Pantalones</a></li>
+                    <li><a href="#">Vestidos</a></li>
+                    <li><a href="#">Hombre</a></li>
+                    <li><a href="#">Mujer</a></li>
+                    <li><a href="#">Niños</a></li>
+                    <li><a href="#">Por talle</a></li>
+                </ul>
+            </i>
+            </div>
+        </div>
+    </header>
+    
     <div class="container">
         <div class="row crear-cuenta">
 
@@ -50,7 +106,7 @@
                         <label for="Repetir Contraseña">Repetir Contraseña</label>
                         <input type="password" id="Repetir Contraseña" class="form-control" required>
                     </div><br><br>
-                    <input type="submit" value="Crear cuenta">
+                    <button class="btn btn-info">Crear Cuenta</button>
                 </form><br>
             </div>
 
@@ -58,7 +114,48 @@
         </div>
     </div>
 
+<!-- ***********  footer  ************   -->
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Nuestras Tiendas</h3>
+            <ul>
+                <li>Avenida Acoyte 1234, Caballito, CP1234, Tel: 4123-5231/5875.</li>
+                <li>Lima 1111 7mo Piso, Centro, CP3215. Tel: 4789-6578</li>
+            </ul>
+        </div>
 
+        <div class="col-md-4">
+            <h3>Redes Sociales</h3>
+            <ul>
+                <li><i class="fab fa-facebook "></i>Facebook.com/iClothes</li>
+                <li><i class="fab fa-twitter "></i>Twitter.com/iClothes_oficial</li>
+                <li><i class="fab fa-instagram "></i>Instagra.com/iClothes</li>
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+                <li><a href="#">Formas de pago</a></li>
+                <li><a href="#">Envios a domicilio</a></li>
+                <li><a href="#">Franquicias</a></li>
+                <li><a href="#">Venta por mayor</a></li>
+                <li><a href="#">Devoluciones</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+    <div class="row footer2row">
+        <div class="">
+            <span style="font-size: 10px;"><i class="far fa-registered"></i> LaTienda Marca
+                Registrada. Todos los derechos reservados. </span>
+        </div>
+    </div>
+</footer>
 
 </body>
 
