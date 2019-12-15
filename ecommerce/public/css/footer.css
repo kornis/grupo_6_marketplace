@@ -20,9 +20,12 @@ footer li
 
 .footer2row
 {
-    background-color: slateblue;
+    background-color: #17a2b8;
     padding:5px;
     justify-content: center;
 }
-
+.footer2row span
+{
+    color: black;
+}
 

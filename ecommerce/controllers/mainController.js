@@ -20,6 +20,9 @@ controller =
     
     registro: (req, res) => {
         res.send(readHTML('formulario-registro'));
+    },
+    productDetail: (req,res) => {
+        res.send(readHTML('productDetail'));
     }
 }
 
