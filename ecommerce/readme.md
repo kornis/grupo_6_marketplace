@@ -24,8 +24,8 @@
 <br>
 <br>
 <br>
-<h3>Link Trello</h3>
-<p>https://trello.com/b/zKdEdISO/proyecto-final-dh</p>
+<h3>Link Trello <a href="https://trello.com/b/zKdEdISO/proyecto-final-dh">Aquí</a></h3>
+
 <br>
 <br>
 <h3>Para este proyecto nos inspiramos en:</h3>
