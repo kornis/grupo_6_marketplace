@@ -1,6 +1,20 @@
 
+html {
+
+    height: 100% !important;
+
+}
+body
+{
+    min-height: 100% !important;
+    position: relative !important;
+}
+
+
 footer
 {
+    position: absolute;
+    bottom: 0;
    margin-top: 20px;
    background-color: orange;    
    padding: 8px 15px 0 15px;
@@ -29,3 +43,18 @@ footer li
     color: black;
 }
 
+@media(min-width:300px)
+{
+    body
+    {
+        padding-bottom: 550px;
+    }
+}
+
+@media(min-width:763px)
+{
+    body
+    {
+        padding-bottom: 260px;
+    }
+}

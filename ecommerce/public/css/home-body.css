@@ -4,6 +4,8 @@
 }
 section
 {
+    position: relative !important;
+    height: 100% !important;
     margin-top: 15px;
 }
 .article
