@@ -24,7 +24,10 @@
 <br>
 <br>
 <br>
-
+<h3>Link Trello</h3>
+<p>https://trello.com/b/zKdEdISO/proyecto-final-dh</p>
+<br>
+<br>
 <h3>Para este proyecto nos inspiramos en:</h3>
 <ul>
 <li><a href="https://www.dafiti.com.ar/">Dafiti</a></li>
