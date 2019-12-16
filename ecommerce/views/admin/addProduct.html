@@ -74,17 +74,23 @@
                 
                     <div class="form-group">
                         <label for="title">Título publicación</label>
-                        <input type="text" name="title" id="title" class="form-control">
+                        <input type="text" name="title" id="title" class="form-control is-invalid">
                         <small class="form-text text-muted">Hasta 65 caracteres</small>
+                        <div class="invalid-feedback">
+                            Debe ingresar un título.
+                          </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-sm-3">
                             <label for="price">Precio</label>
-                            <div class="input-group mb-2 mr-sm-2">
+                            <div class="input-group mb-2 mr-sm-2 ">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">$</div>
                                 </div>
-                                <input type="text" name="price" id="price" class="form-control">
+                                <input type="text" name="price" id="price" class="form-control is-invalid">
+                                <div class="invalid-feedback">
+                                    Ingrese precio.
+                                  </div>
                             </div>
                         </div>
 
