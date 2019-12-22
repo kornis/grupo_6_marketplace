@@ -10,10 +10,7 @@ function readHTML(filename)
 controller = 
 {
     addProduct: (req, res) => {
-        res.send(readHTML('addProduct'));
-    },
-    root: (req,res) => {
-        res.send("hola");
+        res.render(path.join(__dirname,'../views/admin/addProduct'));
     }
 }
 
