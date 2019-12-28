@@ -1,0 +1,85 @@
+
+<%- include('../partials/headhtml', {pagecss: "home-body"}) %>
+
+<%- include('../partials/header-client') %>
+
+<body style="background-color: #EBEBEB;">
+   
+
+
+    <section class="container-main">
+        <div class="row article justify-content-center">
+            <% for(var item of producto){ %>
+                <div class="col-md-5 col-lg-3 article-image">
+                    <div class="item">
+                    <img src="/images/prenda1.png" alt="" srcset="">
+                    <hr>
+                    <div class="row article-name-cont">
+                        <div class="article-name">
+                            <p><%= item.title %></p>
+                            <p>$<%= item.price %></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <%}%>
+
+
+
+            <!--
+            <div class="col-md-5 col-lg-3 article-image">
+                <img src="/images/prenda2.png" alt="" srcset="">
+                <hr>
+                <div class="row article-name-cont">
+                    <div class="article-name">
+                        <p>BUZO NEGRO DE VESTIR LINDO</p>
+                        <p>$150.40</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-lg-3 article-image">
+                <img src="/images/prenda3.png" alt="" srcset="">
+                <hr>
+                <div class="row article-name-cont">
+                    <div class="article-name">
+                        <p>BUZO NEGRO DE VESTIR LINDO</p>
+                        <p>$150.40</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-lg-3 article-image">
+                <img src="/images/prenda4.png" alt="" srcset="">
+                <hr>
+                <div class="row article-name-cont">
+                    <div class="article-name">
+                        <p>BUZO NEGRO DE VESTIR LINDO</p>
+                        <p>$150.40</p>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </section>
+
+
+<!-- ***********  footer  ************   -->
+<%- include('../partials/footer'); %>
+
+
+<script>
+    
+    function showFilter()
+    {
+        var menu = document.querySelector(".filtro");
+        if(menu.style.display === "none"){
+            menu.style.display = "inherit";
+        }
+        else
+        {
+            menu.style.display ="none";
+        }
+    }
+</script>
+</body>
+</html>

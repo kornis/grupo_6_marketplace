@@ -3,7 +3,7 @@ var router = express.Router();
 const adminController = require("../controllers/adminController");
 
 router.get('/agregar-producto',adminController.addProduct);
-router.get("/",adminController.root);
+router.post('/agregar-producto',adminController.saveProduct);
 
 
 module.exports = router;

@@ -1,0 +1,85 @@
+<%- include('../partials/headhtml',{pagecss: 'style'}) %>
+
+<body>
+    
+    <%- include('../partials/header-client') %>
+   
+	<div class="container">
+
+		<div class="row">
+
+			<div class="articulo col-md-12 col-lg-9">
+				<div class="row">
+					<h2>Detalle de la Compra</h2>
+				</div>
+				<div class="row">
+					<div class="col">
+						<img src="images/prenda1-detalle.PNG" alt="prenda" height="200px">
+					</div>
+					<div class="col">
+						<section>
+							<h5>Campera Puma deportiva</h5>
+							<h5>Talle M</h5>
+							<h5>Color Negro</h5>
+						</section>
+					</div>
+					<div class="col">
+						<h5>
+							Cantidad
+							<input type="number" min="1" max="99">
+						</h5>
+					</div>
+					<div class="col">
+						<section>
+							<h2>$ 1850.99</h2>
+							Envío Gratis
+						</section>
+					</div>
+				</div>
+				<div class="row">
+					<a href="home"><button>Seguir Comprando</button></a>
+					<a href="home"><button>Eliminar</button></a>
+				</div>
+			</div>
+			
+			<div class="resumen col-lg-3">
+				<div class="row">
+					<div class="col">
+						<h5>Detalles de envío:</h5>
+						<h5>Carlos Calvo 1575 CABA CP - 1925</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<h5>articulos (1)</h5>
+						<h5>Envío</h5>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<h5>$ 1850.99</h5>
+						<h5>Gratis</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<h4>Total</h4>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<h4>$ 1850.99</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<a href="check out"><button type="submit">Check Out</button></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+<%- include('../partials/footer') %>
+
+</body>
+</html>

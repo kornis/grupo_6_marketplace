@@ -1,0 +1,60 @@
+<%- include('../partials/headhtml',{pagecss: 'style'}) %>
+
+<body>
+
+    <%- include('../partials/header-client') %>
+    
+    <div class="container">
+        <div class="row crear-cuenta">
+
+            <div class="col-12">
+            </div>
+            <h2>Crear Cuenta</h2>
+        </div>
+
+        <div class="row datos-personales">
+
+            <div class="col-12">
+                <form action="pagina a donde va a ir">
+
+                    <br>
+                    <div class="form-group">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" id="Nombre" class="form-control is-invalid" required>
+                        <div class="invalid-feedback">
+                            Ingrese su nombre.
+                          </div>
+                    </div><br><br>
+
+                    <div class="form-group">
+                        <label for="Apellido">Apellido</label>
+                        <input type="text" id="Apellido" class="form-control" required>
+                    </div><br><br>
+
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="text" id="Email" class="form-control" required>
+                    </div><br><br>
+
+                    <div class="form-group">
+                        <label for="Contraseña">Contraseña</label>
+                        <input type="password" id="Contraseña" class="form-control" required>
+                    </div><br><br>
+
+                    <div class="form-group">
+                        <label for="Repetir Contraseña">Repetir Contraseña</label>
+                        <input type="password" id="Repetir Contraseña" class="form-control" required>
+                    </div><br><br>
+                    <button class="btn btn-info">Crear Cuenta</button>
+                </form><br>
+            </div>
+
+
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>

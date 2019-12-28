@@ -1,0 +1,124 @@
+<%- include('../partials/headhtml', {pagecss: "productDetail"}) %>
+
+<body style="background-color: #EBEBEB;">
+    
+    <%- include('../partials/header-client') %>
+
+<!-- ***********  body  ************   -->
+<div class="container">
+<div class="row main-content">
+    <div class="col-sm-11 route ">
+        <span>Indumentaria > </span>
+        <span>Hombre > </span>
+        <span>Camperas > </span>
+        <span>Campera deportiva Puma</span>
+    </div>
+    <div class="col-sm-12 productdetail">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 col-lg-2 miniatura">
+                <img src="/images/miniatura1-detalle.png" alt="">
+                <img src="/images/miniatura2-detalle.png" alt="">
+                <img src="/images/miniatura3-detalle.png" alt="">
+                <img src="/images/miniatura4-detalle.png" alt="">
+            </div>
+            <div class="col-sm-9 col-md-5 col-lg-4 main-image">
+                <img src="/images/prenda1-detalle.png" alt="">
+            </div>
+            <div class="col-sm-12 col-md-5 col-lg-5 buyitem">
+                <h3>CAMPERA PUMA DEPORTIVA NEGRA</h3>
+                <p>Con envío a domicilio</p>
+                <h3 class="precio">$2899.90</h3>
+                <div class="form-row flex-nowrap  talle">
+                    <div class="col-sm-4">
+                        <label for="talle"><small>Talle</small></label>
+                        <select name="talle" id="talle" class="form-control">
+                            <option value="xs">Talle XS</option>
+                            <option value="s">Talle S</option>
+                            <option value="m">Talle M</option>
+                            <option value="l">Talle L</option>
+                            <option value="xl">Talle XL</option>
+                            <option value="xxl">Talle XXL</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-8">
+                        <label for="cantidad"><small>Cantidad</small></label>
+                        <input type="number" min="1" max="99" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-info form-control">Agregar al carrito</button>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-info form-control">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row details-content">
+    <div class="details">
+        
+        <table class="table">
+        <thead>
+            <tr>
+                <th><h5>Detalles del producto</h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tela</td>
+                <td>Algodon | Polyester | Lino | Viscosa</td>
+            </tr>
+            <tr>
+                <td>Bolsillos</td>
+                <td>Dos</td>
+            </tr>
+            <tr>
+                <td>Sexo</td>
+                <td>Hombre</td>
+            </tr>
+            <tr>
+                <td>Fit</td>
+                <td>Relajado</td>
+            </tr>
+            <tr>
+                <td>Tipo de Prenda</td>
+                <td>Invierno</td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>Negro</td>
+            </tr>
+        </tbody>    
+    </table>
+    </div>
+
+    <div class="relacionados">
+        
+    </div>
+</div>
+
+</div>
+
+
+
+
+<%- include('../partials/footer') %>
+
+
+<script>
+    
+    function showFilter()
+    {
+        var menu = document.querySelector(".filtro");
+        if(menu.style.display === "none"){
+            menu.style.display = "inherit";
+        }
+        else
+        {
+            menu.style.display ="none";
+        }
+    }
+</script>
+</body>
+</html>
