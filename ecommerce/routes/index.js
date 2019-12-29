@@ -7,5 +7,5 @@ router.get('/', mainController.root);
 router.get("/carrito", mainController.carrito);
 router.get('/detalle-producto/:id',mainController.productDetail);
 router.get('/registro',mainController.registro);
-
+router.post('/registrarse', mainController.addUser);
 module.exports = router;

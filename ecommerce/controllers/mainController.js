@@ -5,9 +5,21 @@ var path = require('path');
     var htmlfile = fs.readFileSync(path.join(__dirname,"/../views/front/"+filename+".ejs"),"utf-8");
     return htmlfile;
 }*/
-let aviso;
+
 let product = fs.readFileSync(path.join(__dirname,'../db/products.json'),'utf-8');
 productJson = product.length != 0 ? JSON.parse(product) :  "No se encontraron productos disponibles";
+const userPath = path.join(__dirname,"../db/users.json");
+let userfile = fs.readFileSync(userPath,'utf-8');
+var userJson = userfile.length != 0 ? JSON.parse(userfile) : [];
+
+var user = 
+{
+    id:"",
+    name: "",
+    email:"",
+    lastName: "",
+    password: ""
+}
 
 controller = 
 {
@@ -35,7 +47,25 @@ controller =
     },
     productDetail: (req,res) => {
         res.render(path.join(__dirname,'../views/front/productDetail'));
+    },
+    addUser: (req,res)=>{
+        if(userJson.length == 0)
+        {
+            user.id = 1;
+        }
+        else
+        {
+            user.id = userJson.length + 1;
+        }
+        user.name = req.body.name;
+        user.lastname = req.body.lastname;
+        user.email = req.body.email;
+        user.password = req.body.password;
+        userJson.push(user);
+        fs.writeFileSync(userPath,JSON.stringify(userJson));
+        res.redirect('../');
     }
+
 }
 
 module.exports = controller;

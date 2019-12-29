@@ -15,12 +15,12 @@
         <div class="row datos-personales">
 
             <div class="col-12">
-                <form action="pagina a donde va a ir">
+                <form method="POST" class="validar" action="/registrarse" novalidate>
 
                     <br>
                     <div class="form-group">
                         <label for="Nombre">Nombre</label>
-                        <input type="text" id="Nombre" class="form-control is-invalid" required>
+                        <input type="text" id="Nombre" name="name" class="form-control" required>
                         <div class="invalid-feedback">
                             Ingrese su nombre.
                           </div>
@@ -28,22 +28,34 @@
 
                     <div class="form-group">
                         <label for="Apellido">Apellido</label>
-                        <input type="text" id="Apellido" class="form-control" required>
+                        <input type="text" id="Apellido" name="lastname" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Ingrese su apellido.
+                          </div>
                     </div><br><br>
 
                     <div class="form-group">
                         <label for="Email">Email</label>
-                        <input type="text" id="Email" class="form-control" required>
+                        <input type="text" id="Email" name="email" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Ingrese su email.
+                          </div>
                     </div><br><br>
 
                     <div class="form-group">
                         <label for="Contraseña">Contraseña</label>
-                        <input type="password" id="Contraseña" class="form-control" required>
+                        <input type="password" name="password" id="Contraseña" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Debe ingresar una contraseña.
+                          </div>
                     </div><br><br>
 
                     <div class="form-group">
                         <label for="Repetir Contraseña">Repetir Contraseña</label>
                         <input type="password" id="Repetir Contraseña" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Debe reingresar la contraseña.
+                          </div>
                     </div><br><br>
                     <button class="btn btn-info">Crear Cuenta</button>
                 </form><br>
@@ -56,5 +68,25 @@
     <%- include('../partials/footer') %>
 
 </body>
+
+<script>
+ (function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    
+    var forms = document.getElementsByClassName('validar');
+
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
 
 </html>
