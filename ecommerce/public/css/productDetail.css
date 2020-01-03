@@ -38,14 +38,14 @@
 {
     .miniatura
     {
-        display: inline-grid;
-        align-items: baseline;
-        justify-items: stretch;
+        display: flex;
+align-items: unset;
+flex-direction: column-reverse;
     }
 
     .main-image img {
 
-        width: 100%;
+        width: 80%;
     
     }
 }
@@ -67,3 +67,6 @@
         gray;
     }
 }
+
+
+

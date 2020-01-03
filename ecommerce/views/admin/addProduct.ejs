@@ -6,19 +6,19 @@
 
 
 
-    <section class="container">
-        <form method="POST" action="/admin/agregar-producto" class="validar" novalidate>
+    <section class="container-main">
+        <form method="POST" action="/admin/agregar-producto" class="validar" enctype="multipart/form-data" novalidate>
         <div class="row mainDetails">
             <div class="titulo col-sm-10">
                 <h2>CARGAR NUEVO PRODUCTO</h2>
                 <hr>
             </div>
             
-            <div class="col-sm-8">
+            <div class="col-sm-12 col-md-8 col-lg-7">
                 
                     <div class="form-group">
                         <label for="title">Título publicación</label>
-                        <input type="text" name="title" id="title" class="form-control " required>
+                        <input type="text" name="title" id="title" class="form-control " maxlength="65" required>
                         <small class="form-text text-muted">Hasta 65 caracteres</small>
                         <div class="invalid-feedback">
                             Debe ingresar un título.
@@ -38,17 +38,38 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-3">
-                            <label for="initialAmount">Cantidad inicial</label>
-                            <input type="number" class="form-control" name="initialAmount" min="0" max="999" required>
-                        </div>
-                        <div class="form-group col-md-5">
+                        
+                        <div class="form-group col-sm-4 col-md-4">
                             <label for="shipping">Forma de entrega</label>
                             <select class="form-control" name="shipping" required>
                                 <option value="Domicilio/Mostrador">Domicilio/Mostrador</option>
                                 <option value="Envio a domicilio">Envio a domicilio</option>
                                 <option value="Solo Mostrador">Solo Mostrador</option>
                             </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="initialAmount">Cant. Talle xl</label>
+                            <input type="number" class="form-control" name="xlAmount" min="0" max="999" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="initialAmount">Cant. Talle l</label>
+                            <input type="number" class="form-control" name="lAmount" min="0" max="999" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="initialAmount">Cant. Talle m</label>
+                            <input type="number" class="form-control" name="mAmount" min="0" max="999" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="initialAmount">Cant. Talle s</label>
+                            <input type="number" class="form-control" name="sAmount" min="0" max="999" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="initialAmount">Cant. Talle xs</label>
+                            <input type="number" class="form-control" name="xsAmount" min="0" max="999" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="color">Color</label>
+                            <input type="text" id="color" class="form-control" name="color" required>
                         </div>
                     </div>
                     <div class="form-row">
@@ -71,17 +92,29 @@
                     </div>
                     <div class="form-row uploadImage align-items-end">
                         <div class="form-group col-sm-9">
-                            <label for="uploadImage">Cargar Imagen</label>
-                            <input type="file" class="form-control-file" name="uploadImage">
+                            <label for="uploadImage">Cargar Imagen 1</label>
+                            <input type="file" class="form-control-file" name="uploadImage1" required>
+                            <div class="invalid-feedback">
+                                Debe ingresar por lo menos una imagen
+                              </div>
                         </div>
-                        <div class="form-group col-sm-2">
-                            <label class="more-images"><strong style="text-decoration: underline;">Mas
-                                    Imagenes</strong></label>
+                        <div class="form-group col-sm-9">
+                            <label for="uploadImage">Cargar Imagen 2</label>
+                            <input type="file" class="form-control-file" name="uploadImage2">
                         </div>
+                        <div class="form-group col-sm-9">
+                            <label for="uploadImage">Cargar Imagen 3</label>
+                            <input type="file" class="form-control-file" name="uploadImage3">
+                        </div>
+                        <div class="form-group col-sm-9">
+                            <label for="uploadImage">Cargar Imagen 4</label>
+                            <input type="file" class="form-control-file" name="uploadImage4">
+                        </div>
+                        
                     </div>
             </div>
             <div class="row">
-            <div class="preview col-md-4">
+            <div class="preview col-md-12">
                 <h4>Vista Previa</h4>
                 <img src="/images/preview.png" alt="">
                 <p>Seleccionar como Principal</p>
@@ -133,7 +166,7 @@
             <div clasS="form-row">
             <div class="form-group col-sm-12">
                 <label for="description">Descripción de la prenda</label>
-                <textarea class="form-control" name="description" id="description" cols="30" rows="6"></textarea>
+                <textarea class="form-control" name="description" id="description" cols="30" rows="6" maxlength="150"></textarea>
                 <small class="form-text text-muted">Hasta 150 caracteres</small>
             </div>
         </div>
@@ -170,7 +203,8 @@
         form.classList.add('was-validated');
       }, false);
     });
-  }, false);
+
+}, false);
 })();
 
         function showFilter() {
@@ -182,6 +216,7 @@
                 menu.style.display = "none";
             }
         }
+
 
     </script>
 

@@ -11,7 +11,7 @@ productJson = product.length != 0 ? JSON.parse(product) :  "No se encontraron pr
 const userPath = path.join(__dirname,"../db/users.json");
 let userfile = fs.readFileSync(userPath,'utf-8');
 var userJson = userfile.length != 0 ? JSON.parse(userfile) : [];
-
+var producto = "";
 var user = 
 {
     id:"",
@@ -46,7 +46,18 @@ controller =
         res.render(path.join(__dirname,'../views/front/formulario-registro'));
     },
     productDetail: (req,res) => {
-        res.render(path.join(__dirname,'../views/front/productDetail'));
+        for(var prod in productJson)
+        {
+          
+            if(productJson[prod].id == req.params.id)
+            {
+                producto = productJson[prod];
+                
+                res.render(path.join(__dirname,'../views/front/productDetail'),{product: producto});
+            }
+        }
+        
+        res.render(path.join(__dirname,'../views/front/productDetail'),{fail: "Producto no encontrado"});
     },
     addUser: (req,res)=>{
         if(userJson.length == 0)
@@ -69,3 +80,4 @@ controller =
 }
 
 module.exports = controller;
+

@@ -16,28 +16,54 @@
     <div class="col-sm-12 productdetail">
         <div class="row">
             <div class="col-sm-3 col-md-2 col-lg-2 miniatura">
-                <img src="/images/miniatura1-detalle.png" alt="">
-                <img src="/images/miniatura2-detalle.png" alt="">
-                <img src="/images/miniatura3-detalle.png" alt="">
-                <img src="/images/miniatura4-detalle.png" alt="">
+                <% if(product.imagenes[3]!= undefined){ %>
+                    <img src="/images/products/<%= typeof product.imagenes[3] %>" alt="">
+                <%}%>
+                <% if(product.imagenes[2]!=undefined){ %>
+                    <img src="/images/products/<%= product.imagenes[2] %>" alt="">
+                <%}%>
+                <% if(product.imagenes[1]!=undefined){ %>
+                    <img src="/images/products/<%= product.imagenes[1] %>" alt="">
+                <%}%>
+                
+                <img src="/images/products/<%= product.imagenes[0] %>" alt="">
             </div>
             <div class="col-sm-9 col-md-5 col-lg-4 main-image">
-                <img src="/images/prenda1-detalle.png" alt="">
+                <img src="/images/products/<%= product.imagenes[0] %>" alt="">
             </div>
             <div class="col-sm-12 col-md-5 col-lg-5 buyitem">
-                <h3>CAMPERA PUMA DEPORTIVA NEGRA</h3>
-                <p>Con envío a domicilio</p>
-                <h3 class="precio">$2899.90</h3>
+                <h3><%=product.title %></h3>
+                <p>Tipo de entrega: <%= product.formaEntrega %></p>
+                <h3 class="precio">$<%=product.price %></h3>
                 <div class="form-row flex-nowrap  talle">
                     <div class="col-sm-4">
                         <label for="talle"><small>Talle</small></label>
                         <select name="talle" id="talle" class="form-control">
+                            <% if(product.cantidad.cantxs == 0){ %>
+                                <option disabled value="xs">Talle XS</option>
+                            <% } else{%>
                             <option value="xs">Talle XS</option>
+                            <% } %>
+                            <% if(product.cantidad.cants == 0){ %>
+                                <option disabled value="s">Talle S</option>
+                            <% } else{%>
                             <option value="s">Talle S</option>
+                            <% } %>
+                            <% if(product.cantidad.cantm == 0){ %>
+                                <option disabled value="m">Talle M</option>
+                            <% } else{%>
                             <option value="m">Talle M</option>
+                            <% } %>
+                            <% if(product.cantidad.cantl == 0){ %>
+                                <option disabled value="l">Talle L</option>
+                            <% } else{%>
                             <option value="l">Talle L</option>
+                            <% } %>
+                            <% if(product.cantidad.cantxl == 0){ %>
+                                <option disabled value="xl">Talle XL</option>
+                            <% } else{%>
                             <option value="xl">Talle XL</option>
-                            <option value="xxl">Talle XXL</option>
+                            <% } %>
                         </select>
                     </div>
                     <div class="col-sm-8">
@@ -67,27 +93,27 @@
         <tbody>
             <tr>
                 <td>Tela</td>
-                <td>Algodon | Polyester | Lino | Viscosa</td>
+                <td><%= product.tela %></td>
             </tr>
             <tr>
                 <td>Bolsillos</td>
-                <td>Dos</td>
+                <td><%= product.bolsillos %></td>
             </tr>
             <tr>
                 <td>Sexo</td>
-                <td>Hombre</td>
+                <td><%= product.sexo %></td>
             </tr>
             <tr>
                 <td>Fit</td>
-                <td>Relajado</td>
+                <td><%= product.fit %></td>
             </tr>
             <tr>
                 <td>Tipo de Prenda</td>
-                <td>Invierno</td>
+                <td><%= product.tipoPrenda %></td>
             </tr>
             <tr>
                 <td>Color</td>
-                <td>Negro</td>
+                <td><%= product.color %></td>
             </tr>
         </tbody>    
     </table>
