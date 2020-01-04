@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row logo-row">
+            <div class="logo">
+                <a href="/"><img src="/images/logo-tienda.png" alt="" srcset=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container login-container">
+        <div class="row main-row">
+            <div class="col-sm-12 login">
+                <img src="/images/default.png" class="login-img"alt="">
+                <form method="POST" action="/login">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="text" name="password" id="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary submit">Ingresar</button>
+                </form>
+            </div>
+            <div class="col singup">
+            <div class="registrarse">
+                <span><small>No estás registrado? Hacé click <a href="/registrarse"> aquí </a></small></span>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        
+        
+        var img = document.querySelector(".login-img");
+      function resize()
+      {
+        var w = document.querySelector(".login").clientWidth;
+        img.style.left = ((w/2)-130+65)+"px";
+      }
+        window.addEventListener("resize", resize);
+      resize();
+
+    </script>
+    
+</body>
+</html>

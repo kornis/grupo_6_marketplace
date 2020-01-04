@@ -6,7 +6,11 @@
 
 <!-- ***********  body  ************   -->
 <div class="container">
+    <% if(typeof fail == "undefined"){ %>
 <div class="row main-content">
+    
+
+    
     <div class="col-sm-11 route ">
         <span>Indumentaria > </span>
         <span>Hombre > </span>
@@ -123,7 +127,10 @@
         
     </div>
 </div>
+<%} else { %>
 
+    <h3>Producto no encontrado</h3>
+<%} %>
 </div>
 
 

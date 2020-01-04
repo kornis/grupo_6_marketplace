@@ -16,8 +16,13 @@ footer
     position: absolute;
     bottom: 0;
    margin-top: 20px;
-   background-color: orange;    
+   background-color: darkslateblue;    
    padding: 8px 15px 0 15px;
+   color:beige;
+}
+footer a
+{
+    color:beige;
 }
 footer row
 {
@@ -34,7 +39,7 @@ footer li
 
 .footer2row
 {
-    background-color: #17a2b8;
+    background-color:mediumslateblue;
     padding:5px;
     justify-content: center;
 }

@@ -1,0 +1,89 @@
+*
+{
+    box-sizing: border-box;
+}
+
+a
+{
+    color: blanchedalmond;
+}
+body
+{
+    background-color: darkslateblue;
+}
+.row.logo-row {
+    background-color: 
+    mediumslateblue;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img
+{
+    width: 250px;
+}
+
+.login-container
+{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login
+{
+    position: relative;
+    flex: auto;
+}
+
+.login img
+{
+    border-radius: 50%;
+    position: absolute;
+    width:130px;
+    left: 30%;
+top: -110px;
+border: 1px solid aliceblue;
+}
+.main-row
+{
+    
+    background-color: gainsboro;
+    margin: 15px;
+}
+
+.col-sm-12.login {
+
+    margin: 15px;
+
+}
+
+.col.singup {
+
+    background-color: 
+
+    mediumslateblue;
+    padding: 15px;
+
+}
+
+.submit
+{
+    width: 100%;
+}
+
+.registrarse span
+{
+    display: flex;
+    justify-content: center;
+}
+
+@media(min-width: 540px)
+{
+    .main-row
+    {
+        min-width: 400px;
+    }
+}

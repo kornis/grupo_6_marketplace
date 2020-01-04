@@ -1,6 +1,6 @@
 a
 {
-    color: black;
+   color:black;
 }
 li
 {
@@ -38,7 +38,7 @@ li
     padding-top: 5px;
     font-size: 10px;
     max-height: 38px;
-    background-color:cornflowerblue;
+    background-color:mediumslateblue;
 }
 .row.first-header p
 {
@@ -90,17 +90,17 @@ width: 100%;
 {
     text-align: center;
     padding: 3px;
-    border: 2px solid olive;
-    background-color: goldenrod;
+    border: 2px solid mediumslateblue;
+    background-color: darkslateblue;
 }
 .nav2 a
 {
-    color: black;
+    color: blanchedalmond
 }
 
 .header
 {
-    background-color: rgb(236, 191, 44);
+    background-color:darkslateblue;
 }
 
 .social
@@ -145,7 +145,7 @@ width: 100%;
     }
     .nav2-col a
     {
-        color: rgba(50, 50,50, 0.9);
+        color: beige;
     }
 
     .user-nav {
