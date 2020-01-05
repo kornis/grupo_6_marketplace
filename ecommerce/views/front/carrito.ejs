@@ -7,39 +7,49 @@
 	<div class="container">
 
 		<div class="row">
-
+			<% if(carrito!= undefined){%>
 			<div class="articulo col-md-12 col-lg-9">
+				
 				<div class="row">
 					<h2>Detalle de la Compra</h2>
 				</div>
+				<% for(var c in carrito){%>
 				<div class="row">
+					
+
+					
 					<div class="col">
 						<img src="images/prenda1-detalle.PNG" alt="prenda" height="200px">
 					</div>
 					<div class="col">
 						<section>
-							<h5>Campera Puma deportiva</h5>
-							<h5>Talle M</h5>
-							<h5>Color Negro</h5>
+							<h5><%=carrito[c].title%></h5>
+							<h5><%=carrito[c].talle%></h5>
+							<h5><%=carrito[c].color%></h5>
 						</section>
 					</div>
 					<div class="col">
 						<h5>
 							Cantidad
-							<input type="number" min="1" max="99">
+							<span><%=carrito[c].cantidad%></span>
 						</h5>
 					</div>
 					<div class="col">
 						<section>
-							<h2>$ 1850.99</h2>
+							<h2>$<%=carrito[c].precio%></h2>
 							Envío Gratis
 						</section>
 					</div>
+				
 				</div>
+				
+				
 				<div class="row">
-					<a href="home"><button>Seguir Comprando</button></a>
-					<a href="home"><button>Eliminar</button></a>
+					<a href="/eliminar"><button>Eliminar</button></a>
 				</div>
+				<hr>
+				<%}%>
+				
 			</div>
 			
 			<div class="resumen col-lg-3">
@@ -69,11 +79,14 @@
 				</div>
 				<div class="row">
 					<div class="col">
-						<a href="check out"><button type="submit">Check Out</button></a>
+						<a href="/"><button>Seguir Comprando</button></a>
+						<a href="/pagar"><button type="submit">Check Out</button></a>
 					</div>
 				</div>
 			</div>
-
+			<%} else{%>
+				<h3>No hay items en el carrito</h3>
+			<%}%>
 		</div>
 
 	</div>

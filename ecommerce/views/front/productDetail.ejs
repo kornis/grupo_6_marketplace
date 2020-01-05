@@ -17,6 +17,7 @@
         <span>Camperas > </span>
         <span>Campera deportiva Puma</span>
     </div>
+    <form method="post" action="/agregar">
     <div class="col-sm-12 productdetail">
         <div class="row">
             <div class="col-sm-3 col-md-2 col-lg-2 miniatura">
@@ -37,6 +38,7 @@
             </div>
             <div class="col-sm-12 col-md-5 col-lg-5 buyitem">
                 <h3><%=product.title %></h3>
+                <input type="hidden" name="id" value="<%=product.id%>">
                 <p>Tipo de entrega: <%= product.formaEntrega %></p>
                 <h3 class="precio">$<%=product.price %></h3>
                 <div class="form-row flex-nowrap  talle">
@@ -72,18 +74,20 @@
                     </div>
                     <div class="col-sm-8">
                         <label for="cantidad"><small>Cantidad</small></label>
-                        <input type="number" min="1" max="99" class="form-control">
+                        <input type="number" min="1" max="99" class="form-control" name="cantidad">
                     </div>
+                    
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-info form-control">Agregar al carrito</button>
+                    <button class="btn btn-info form-control" name="add">Agregar al carrito</button>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-info form-control">Comprar</button>
+                    <button class="btn btn-info form-control" name="buy">Comprar</button>
                 </div>
             </div>
         </div>
     </div>
+</form>
 </div>
 <div class="row details-content">
     <div class="details">
@@ -129,7 +133,7 @@
 </div>
 <%} else { %>
 
-    <h3>Producto no encontrado</h3>
+    <h3><%=fail%></h3>
 <%} %>
 </div>
 

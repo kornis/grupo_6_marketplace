@@ -8,6 +8,23 @@ li
     font-size: 1rem;
     font-weight: normal;
 }
+.tachado
+{
+    color: gray;
+    text-decoration: line-through;
+}
+.desc
+{
+    color: green;
+    font-size: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+    vertical-align: 5px;
+}
+.precioDesc
+{
+    font-size: 20px;
+}
 
 .filtro
 {

@@ -9,18 +9,18 @@ const path = require('path');
     return htmlfile;
 }*/
 
-let product =   {id:"",
+let product =   {id:0,
                 title: "",
-                price: "",
+                price: 0,
                 cantidad: {
-                cantxs: "",
-                cants: "",
-                cantm: "",
-                cantl: "",
-                cantxl: ""},
+                cantxs: 0,
+                cants: 0,
+                cantm: 0,
+                cantl: 0,
+                cantxl: 0},
                 formaEntrega: "",
                 codOferta:"",
-                descuento: "",
+                descuento: 0,
                 marca:"",
                 bolsillos: "",
                 tipoPrenda: "",
@@ -48,12 +48,12 @@ controller =
     {
         product.id = products.length + 1;
         product.title = req.body.title;
-        product.price = req.body.price;
-        product.cantidad.cantxs = req.body.xsAmount;
-        product.cantidad.cants = req.body.sAmount;
-        product.cantidad.cantm = req.body.mAmount;
-        product.cantidad.cantl = req.body.lAmount;
-        product.cantidad.cantxl = req.body.xlAmount;
+        product.price = parseInt(req.body.price,10);
+        product.cantidad.cantxs =parseInt(req.body.xsAmount,10);
+        product.cantidad.cants = parseInt(req.body.sAmount,10);
+        product.cantidad.cantm = parseInt(req.body.mAmount,10);
+        product.cantidad.cantl = parseInt(req.body.lAmount,10);
+        product.cantidad.cantxl = parseInt(req.body.xlAmount,10);
         product.formaEntrega = req.body.shipping;
         product.codOferta = req.body.offerCode;
         product.descuento = req.body.discount;

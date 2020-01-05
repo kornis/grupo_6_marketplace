@@ -52,6 +52,7 @@ border: 1px solid aliceblue;
     
     background-color: gainsboro;
     margin: 15px;
+    border-radius: 10px;
 }
 
 .col-sm-12.login {
@@ -66,7 +67,7 @@ border: 1px solid aliceblue;
 
     mediumslateblue;
     padding: 15px;
-
+    border-radius: 0 0 10px 10px;
 }
 
 .submit

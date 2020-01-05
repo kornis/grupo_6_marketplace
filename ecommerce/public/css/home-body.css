@@ -2,6 +2,16 @@
 {
     box-sizing: border-box;
 }
+a:hover
+{
+    text-decoration: none;
+    color: black;
+}
+.title
+{
+    display: none;
+}
+
 section
 {
     position: relative !important;
@@ -18,7 +28,19 @@ section
     width: 80%;
 
 }
+.tachado
+{
+    display: none;
+}
 
+.article-image:hover .tachado 
+{
+    display: block;
+}
+.article-image:hover .title
+{
+    display: initial;
+}
 .item
 {
     display: flex;
@@ -39,6 +61,10 @@ section
 }
 .article-name p {
     text-align: center;
+}
+.article-name-cont
+{
+    padding-bottom: 10px;
 }
 
 .container-main
