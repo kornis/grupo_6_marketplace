@@ -7,5 +7,5 @@ var controller = {
         res.render(path.join(__dirname,"../views/front/login"));
     }
 }
-
+console.log(path.join(__dirname,'hola'));
 module.exports = controller;

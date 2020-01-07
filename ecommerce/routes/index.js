@@ -9,6 +9,6 @@ router.get('/detalle-producto/:id',mainController.productDetail);
 router.get('/registrarse',mainController.registro);
 router.post('/registrarse', mainController.addUser);
 router.post('/agregar',mainController.addCart);
-
+router.get('/carritoDelete/:id',mainController.deleteCart);
 
 module.exports = router;

@@ -41,7 +41,7 @@ var products = fileInfo.length == 0 ? products = [] : JSON.parse(fileInfo);
 controller = 
 {
     addProduct: (req, res) => {
-        res.render(path.join(__dirname,'../views/admin/addProduct'));
+        res.render('addProduct');
     },
 
     saveProduct: (req, res, next) =>
@@ -65,22 +65,19 @@ controller =
         product.fit = req.body.fit;
         product.color = req.body.color;
         product.descripcion = req.body.description;
-       // product.imagenes.imagen1 = req.files[0].filename;
         for(var i = 0; i<= req.files.length; i++){
         
        if(typeof req.files[i] !== 'undefined'){
              product.imagenes[i]= req.files[i].filename;
         }
     }
-        /*
-        product.imagenes.imagen3 = req.files[2].filename;
-        product.imagenes.imagen4 = req.files[3].filename;*/
+        
        
         
 
         products.push(product);
         fs.writeFileSync(path.join(__dirname,'../db/products.json'),JSON.stringify(products));
-        res.redirect('../');
+        res.render('index');
         console.log(req.files[1]);
     }
 }

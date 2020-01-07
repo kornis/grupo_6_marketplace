@@ -26,6 +26,7 @@ var user =
 var productoCompra = 
 {
     id:0,
+    idCart:0,
     titulo:"",
     precio:0,
     cantidad:0,
@@ -37,17 +38,17 @@ var productoCompra =
 controller = 
 {
     root: (req, res) => {
-        res.render(path.join(__dirname,'../views/front/index'),{producto: productJson});
+        res.render('index');
         
     },
 
     carrito: (req, res) => {
 
-        res.render(path.join(__dirname,'../views/front/carrito'),{carrito: cartJson});
+        res.render('carrito',{carrito: cartJson});
     },
     
     registro: (req, res) => {
-        res.render(path.join(__dirname,'../views/front/formulario-registro'));
+        res.render('formulario-registro');
     },
     productDetail: (req,res) => {
         for(var prod in productJson)
@@ -57,11 +58,11 @@ controller =
             {
                 producto = productJson[prod];
                 
-                res.render(path.join(__dirname,'../views/front/productDetail'),{product: producto});
+                res.render('productDetail',{product: producto,carrito:cartJson});
             }
         }
          
-        res.render(path.join(__dirname,'../views/front/productDetail'),{fail: "Producto no encontrado"});
+        res.render('productDetail',{fail: "Producto no encontrado",carrito:cartJson});
     },
     addUser: (req,res)=>{
         if(userJson.length == 0)
@@ -78,38 +79,51 @@ controller =
         user.password = req.body.password;
         userJson.push(user);
         fs.writeFileSync(userPath,JSON.stringify(userJson));
-        res.redirect('../');
+        res.render('index',{carrito:cartJson});
     },
     addCart: (req,res)=>
     {
+
        for(var cp in cartJson)
        {
            if(cartJson[cp].id == req.body.id && cartJson[cp].talle == req.body.talle)
            {
                 cartJson[cp].cantidad = parseInt(cartJson[cp].cantidad,10) + parseInt(req.body.cantidad,10); 
                 fs.writeFileSync(cartPath,JSON.stringify(cartJson));
-                res.redirect("../");
+               // res.render(path.join(__dirname,'../views/front/index'),{carrito:cartJson});
+                res.render("index",{carrito:cartJson});
                 process.exit();
            }
        } 
 
-       productoCompra.id = req.body.id;
+       
        for(var p in productJson){
            if(productJson[p].id == req.body.id)
            {
+                productoCompra.id = req.body.id;
                 productoCompra.titulo = productJson[p].title;
-                productoCompra.precio = productJson[p].price;
+                productoCompra.precio = parseInt(productJson[p].price);
                 productoCompra.color = productJson[p].color;
-           }
-           else{
-               res.render('/',{error:"No se encontró el artículo."});
+                productoCompra.talle = req.body.talle;
+                productoCompra.cantidad = parseInt(req.body.cantidad);
+                cartJson.push(productoCompra);
+                fs.writeFileSync(cartPath,JSON.stringify(cartJson));
+               res.render('index',{carrito:cartJson});
+              
+               process.exit();
            }
        }
-        productoCompra.cantidad = req.body.cantidad;
-        productoCompra.talle = req.body.talle;
-        cartJson.push(productoCompra);
+ 
+      
+    },
+    deleteCart: (req,res) =>
+    {
+        cartJson = cartJson.filter(item =>{
+            item.id != req.params.id
+        });
+
         fs.writeFileSync(cartPath,JSON.stringify(cartJson));
-        res.redirect("/");
+        res.render('carrito');
     }
 
 }
