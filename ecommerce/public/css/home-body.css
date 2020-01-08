@@ -28,12 +28,12 @@ section
     width: 80%;
 
 }
-.tachado
+.hidePrice
 {
     display: none;
 }
 
-.article-image:hover .tachado 
+.article-image:hover .hidePrice 
 {
     display: block;
 }

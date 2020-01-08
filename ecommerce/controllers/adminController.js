@@ -41,7 +41,7 @@ var products = fileInfo.length == 0 ? products = [] : JSON.parse(fileInfo);
 controller = 
 {
     addProduct: (req, res) => {
-        res.render('addProduct');
+        res.render('admin/addProduct');
     },
 
     saveProduct: (req, res, next) =>
@@ -77,8 +77,8 @@ controller =
 
         products.push(product);
         fs.writeFileSync(path.join(__dirname,'../db/products.json'),JSON.stringify(products));
-        res.render('index');
-        console.log(req.files[1]);
+        res.redirect('/');
+    
     }
 }
 

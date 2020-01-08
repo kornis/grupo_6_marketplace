@@ -38,17 +38,17 @@ var productoCompra =
 controller = 
 {
     root: (req, res) => {
-        res.render('index');
+        res.render('front/index',{producto: productJson,carrito:cartJson});
         
     },
 
     carrito: (req, res) => {
 
-        res.render('carrito',{carrito: cartJson});
+        res.render('front/carrito',{carrito: cartJson});
     },
     
     registro: (req, res) => {
-        res.render('formulario-registro');
+        res.render('front/formulario-registro',{carrito: cartJson});
     },
     productDetail: (req,res) => {
         for(var prod in productJson)
@@ -58,11 +58,11 @@ controller =
             {
                 producto = productJson[prod];
                 
-                res.render('productDetail',{product: producto,carrito:cartJson});
+                res.render('front/productDetail',{product: producto,carrito:cartJson});
             }
         }
          
-        res.render('productDetail',{fail: "Producto no encontrado",carrito:cartJson});
+        res.render('front/productDetail',{fail: "Producto no encontrado",carrito:cartJson});
     },
     addUser: (req,res)=>{
         if(userJson.length == 0)
@@ -79,7 +79,7 @@ controller =
         user.password = req.body.password;
         userJson.push(user);
         fs.writeFileSync(userPath,JSON.stringify(userJson));
-        res.render('index',{carrito:cartJson});
+        res.redirect('/');
     },
     addCart: (req,res)=>
     {
@@ -90,8 +90,7 @@ controller =
            {
                 cartJson[cp].cantidad = parseInt(cartJson[cp].cantidad,10) + parseInt(req.body.cantidad,10); 
                 fs.writeFileSync(cartPath,JSON.stringify(cartJson));
-               // res.render(path.join(__dirname,'../views/front/index'),{carrito:cartJson});
-                res.render("index",{carrito:cartJson});
+                res.redirect("/");
                 process.exit();
            }
        } 
@@ -108,7 +107,7 @@ controller =
                 productoCompra.cantidad = parseInt(req.body.cantidad);
                 cartJson.push(productoCompra);
                 fs.writeFileSync(cartPath,JSON.stringify(cartJson));
-               res.render('index',{carrito:cartJson});
+               res.redirect('/');
               
                process.exit();
            }
@@ -123,7 +122,7 @@ controller =
         });
 
         fs.writeFileSync(cartPath,JSON.stringify(cartJson));
-        res.render('carrito');
+        res.redirect('/carrito');
     }
 
 }

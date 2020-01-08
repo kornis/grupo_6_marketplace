@@ -1,7 +1,7 @@
 
-<%- include('./headhtml', {pagecss: "home-body"}) %>
+<%- include('../partials/headhtml', {pagecss: "home-body"}) %>
 
-<%- include('./header-client') %>
+<%- include('../partials/header-client') %>
 
 <body style="background-color: #EBEBEB;">
    
@@ -22,9 +22,9 @@
                         <div class="article-name">
                             <p class="title"><%= item.title %></p>
                             <%if(item.codOferta=="Si"){%>
-                                <p class="tachado">$<%= item.price %></p><span class="precioDesc"><% var pd = (item.price*item.descuento)/100; %>$<%=pd%></span><span class="desc"><%=item.descuento%>% OFF</span> <span class="precioDescuento"></span>
+                                <p class="hidePrice tachado">$<%= item.price %></p><span class="precioDesc"><% var pd = (item.price*item.descuento)/100; %>$<%=pd%></span><span class="desc"><%=item.descuento%>% OFF</span> <span class="precioDescuento"></span>
                             <%}else{%>
-                                <p>$<%= item.price %></p>
+                                <p class="hidePrice">$<%= item.price %></p>
                             <%}%>
                             
                         </div>
@@ -42,7 +42,7 @@
 
 
 <!-- ***********  footer  ************   -->
-<%- include('.footer'); %>
+<%- include('../partials/footer'); %>
 
 
 <script>
