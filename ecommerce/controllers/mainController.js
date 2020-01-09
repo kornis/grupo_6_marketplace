@@ -1,10 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-/*function readHTML(filename)
-{
-    var htmlfile = fs.readFileSync(path.join(__dirname,"/../views/front/"+filename+".ejs"),"utf-8");
-    return htmlfile;
-}*/
+
 const cartPath = path.join(__dirname, "../db/cart.json");
 const cart = fs.readFileSync(cartPath,'utf-8');
 cartJson = cart.length != 0 ? JSON.parse(cart) : [];
@@ -14,6 +10,10 @@ const userPath = path.join(__dirname,"../db/users.json");
 let userfile = fs.readFileSync(userPath,'utf-8');
 var userJson = userfile.length != 0 ? JSON.parse(userfile) : [];
 var producto = "";
+
+
+
+
 var user = 
 {
     id:0,

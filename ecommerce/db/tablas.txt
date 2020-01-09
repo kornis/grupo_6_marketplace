@@ -1,0 +1,60 @@
+tabla usuarios
+
+id: 
+name: 
+email:
+password:
+avatar:
+banned:
+type:
+
+
+tabla productos
+
+id:
+titulo:
+precio:
+descuento:
+descripcion:
+valorDescuento:
+categoria_id:
+
+
+
+tabla categorias
+
+id:
+name:
+
+
+
+tabla calzado:
+
+id:
+color:
+talle:
+sexo:
+image1:
+image2:
+categories_id:
+product_id:
+
+
+
+tabla ropa:
+
+id:
+color:
+talle xl:
+talle l:
+talle m:
+talle s:
+talle xs:
+bolsillos:
+fit:
+image1:
+image2:
+image3:
+image4:
+categories_id:
+product_id:
