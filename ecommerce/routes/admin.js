@@ -18,6 +18,6 @@ var upload = multer({ storage: storage});
 
 router.get('/agregar-producto',adminController.addProduct);
 router.post('/agregar-producto',upload.any(),adminController.saveProduct);
-
+router.get('/categorias',adminController.categories);
 
 module.exports = router;

@@ -79,6 +79,11 @@ controller =
         fs.writeFileSync(path.join(__dirname,'../db/products.json'),JSON.stringify(products));
         res.redirect('/');
     
+    },
+
+    categories: (req,res) =>
+    {
+        res.render('admin/categories');
     }
 }
 
