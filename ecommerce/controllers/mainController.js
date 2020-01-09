@@ -1,11 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 
-const cartPath = path.join(__dirname, "../db/cart.json");
-const cart = fs.readFileSync(cartPath,'utf-8');
-cartJson = cart.length != 0 ? JSON.parse(cart) : [];
-let product = fs.readFileSync(path.join(__dirname,'../db/products.json'),'utf-8');
-productJson = product.length != 0 ? JSON.parse(product) :  "error";
+
 const userPath = path.join(__dirname,"../db/users.json");
 let userfile = fs.readFileSync(userPath,'utf-8');
 var userJson = userfile.length != 0 ? JSON.parse(userfile) : [];
